@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Creative - Gallery Page</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+  <!-- Custom Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/gallery.css" type="text/css">
+
+  <!-- Blueimp Gallery -->
+  <link rel="stylesheet" href="css/blueimp-gallery.min.css">
+  
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+	
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="test_index.html">RDG Motors</a>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+	</nav>
+
+	<!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+	<!-- REGULAR -->
+  <!-- <div id="blueimp-gallery" class="blueimp-gallery"> -->
+  <!-- VISIBLE ARROWS -->
+  <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">  
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+	</div>
+  
+
+  <hr/>
+  <hr/>
+  <hr/>
+	<div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <div id="links">
+          <a href="img/motors/motor 1/optimized-motor-1.jpg" title="Motor 1">
+            <img src="img/motors/motor 1/thumb-motor-1.jpg" alt="Motor 1">
+          </a>
+          <a href="img/motors/motor 2/optimized-motor-2.jpg" title="Motor 2">
+            <img src="img/motors/motor 2/thumb-motor-2.jpg" alt="Motor 2">
+          </a>
+          <a href="img/motors/motor 3/optimized-motor-3.jpg" title="Motor 3">
+            <img src="img/motors/motor 3/thumb-motor-3.jpg" alt="Motor 3">
+          </a>
+        </div>
+      </div>      
+    </div> 
+  </div>
+
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/jquery.fittext.js"></script>
+	<script src="js/wow.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="js/creative.js"></script>
+
+	<!-- Bootstrap Gallery -->
+	<script src="js/blueimp-gallery.min.js"></script>
+	
+
+	<script>
+    document.getElementById('links').onclick = function (event) {
+      event = event || window.event;
+      var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event},
+        links = this.getElementsByTagName('a');
+      blueimp.Gallery(links, options);
+    };
+  </script>
+
+</body>
+</html>
